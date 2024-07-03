@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit course</title>
+    <link rel="stylesheet" href="submit.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chivo:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Submit a course</h1>
+        <form action="submit.php" method="post" enctype="multipart/form-data">
+            <div class="input-box">
+                <input type="text" placeholder="Title" name="title" required>
+            </div>
+            <div class="input-box">
+                <select id="category" name="category" required>
+                    <option value="math">Mathematics</option>
+                    <option value="physics">Physics</option>
+                    <option value="english">English</option>
+                    <option value="philosophy">Philosophy</option>
+                    <option value="biology">Biology</option>
+                    <option value="computerScience">Computer Science</option>
+                </select>
+            </div>
+            <div class="input-box">
+                <textarea id="description" name="description" placeholder="Description" rows="4" required></textarea>
+            </div>
+            <div class="input-box">
+                <label for="file-upload" class="custom-file-upload">
+                    <i class="bx bxs-cloud-upload"></i> Choose File
+                </label>
+                <input id="file-upload" type="file" name="myfile">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
